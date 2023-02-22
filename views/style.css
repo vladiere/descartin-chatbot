@@ -1,0 +1,104 @@
+@font-face {
+    font-family: 'MantraksharLearn';
+    src: url('./MantraksharLearn.ttf');
+}
+
+:root {
+    --primary-background: #ECECEC;
+    --primary-color: #F7F7F7;
+    --secondary-color: #4A4A4A;
+    --color-dark-gray: #444444;
+    --color-warmer-dark-gray: #212121;
+    --color-pure-white: #FFFFFF;
+    --color-antiquewhite: #e6d8c7;
+    --color-outgoing-background: #e8b87a;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'MantraksharLearn', sans-serif;
+}
+
+body {
+    background-color: var(--primary-background);
+}
+
+.chat-box {
+    max-width: 100%;
+    width: 400px;
+    margin: 0 auto;
+    border: 1px solid #000;
+    max-height: 35rem;
+    height: 35rem;
+    border-radius: 0px 0px 10px 10px;
+    overflow: hidden;
+}
+
+.chat-box-header {
+    text-align: center;
+    margin: 0 auto;
+    padding: 10px;
+    font-size: 24px;
+    font-weight: bold;
+    background-color: var(--primary-background);
+    border-bottom: 2px solid var(--color-dark-gray);
+}
+
+.chat-box-body {
+    padding: 16px;
+    overflow-y: auto;
+    height: calc(100% - 100px);
+    max-height: (100vh - 100px);
+    box-shadow: inset 0px 0px 13px 0px var(--secondary-color);
+    background-color: var(--colot-antiquewhite);
+}
+
+.chat-box .outgoing-message,
+.chat-box .incoming-message {
+    word-break:keep-all;
+    padding: 10px 20px;
+}
+
+.chat-box .incoming-message {
+    margin: 0px 5px 5px 50px;
+    background-color: var(--color-outgoing-background);
+    text-align: right;
+    border-radius: 20px 0px 20px 20px / 18px 0px 18px 18px;
+    border: 1px solid #800000;
+}
+
+.chat-box .outgoing-message {
+    margin: 0px 50px 5px 2px;
+    background-color: #e6d8c7;
+    text-align: left;
+    border-radius: 0px 20px 20px 20px / 0px 20px 20px 20px; 
+    border: 1px solid #800000;
+}
+
+.chat-box-footer {
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    padding: 8px 16px;
+}
+
+.chat-box-footer input[type="text"] {
+    bottom: 0;
+    border-radius: 0;
+    border: 1px solid #000;
+    font-size: 15px;
+    margin-left: 0;
+    width: 100%;
+    outline: none;
+    padding: .5rem 5px;
+    border-radius: 0px 0px 0px 5px;
+}
+
+.chat-box-footer input[type="button"] {
+    padding: .5rem;
+    cursor: pointer;
+    border-radius: 0px 5px 5px 0px;
+    font-size: 14px;
+}
